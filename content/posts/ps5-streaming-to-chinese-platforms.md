@@ -62,7 +62,7 @@ sudo docker run -d -it --name pstream -p 8080:8080 -p 1935:1935 --restart always
 3. 回到主界面，你将看到 PS5 的游戏画面，点击右侧的"开始直播"按钮，即可开始推流
 
 ### 方案二：使用 PStream 直接 Push 到直播平台
-在运行 PStream 的设备上，找一个固定位置，例如 `/opt/pstream`，将 GitHub 上最新的 [nginx.conf](https://github.com/Swilder-M/docker-images/blob/master/pstream/nginx.conf) 文件复制或下载到该目录下，然后编辑它，例如：
+在运行 PStream 的设备上，找一个固定位置，例如 `/opt/pstream`，将 GitHub 上最新的 [nginx.conf](https://github.com/sigming/docker-images/blob/master/pstream/nginx.conf) 文件复制或下载到该目录下，然后编辑它，例如：
 ```nginx
 # 其他配置省略，不用修改
 rtmp {

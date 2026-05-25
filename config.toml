@@ -49,7 +49,7 @@ pygmentscodefencesguesssyntax = true
   customCSS = ["custom.css"]                          # 禁用页面切换动画效果的CSS
 
 [social]
-  github = "https://github.com/Swilder-M"
+  github = "https://github.com/sigming"
   twitter = "https://x.com/codming"
   # facebook = " "
   # weibo = " "
