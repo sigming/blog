@@ -66,6 +66,56 @@
   border-radius: 5px;
 }
 
+/* 内嵌 SVG 流程图 */
+.markdown .flow-wrap {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.markdown .flow-svg {
+  width: 318px;
+  max-width: 100%;
+  height: auto;
+  font-family: "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+/* 节点 */
+.markdown .flow-box rect {
+  fill: #fafafa;
+  stroke: #dedede;
+  stroke-width: 1;
+}
+
+.markdown .flow-box text {
+  font-size: 14px;
+  fill: #333333;
+  text-anchor: middle;
+}
+
+/* 连线 */
+.markdown .flow-edge path {
+  fill: none;
+  stroke: #b5b5b5;
+  stroke-width: 1.5;
+  marker-end: url(#flow-arrow);
+}
+
+.markdown .flow-svg marker path {
+  fill: #b5b5b5;
+  stroke: none;
+}
+
+/* 连线上的文字，描边白色底把连线遮住 */
+.markdown .flow-elabel text {
+  font-size: 12px;
+  fill: #888888;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 5px;
+  stroke-linejoin: round;
+}
+
 /* 图片描述样式 */
 .image-caption {
   font-size: 12px;
