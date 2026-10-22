@@ -1,5 +1,5 @@
-{{ if not (.Page.Scratch.Get "firstImageDone") }}
-{{ .Page.Scratch.Set "firstImageDone" true }}
+{{ if not (.Page.Store.Get "firstImageDone") }}
+{{ .Page.Store.Set "firstImageDone" true }}
 <div class="fancybox">
 <a data-fancybox="gallery" href="{{ .Destination | safeURL }}">
 <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} fetchpriority="high" />

@@ -10,7 +10,7 @@
         <div class="description">
             <p class="sub_title">{{ with .Site.Params.subTitle }}{{ . }}{{ else }}{{ end }}</p>
             <div class="my_socials">
-                {{ range $key, $val := .Site.Social }}
+                {{ range $key, $val := .Site.Params.social }}
                 {{ if ne $val "" }}
                 {{ if eq $key "twitter" }}
                 <a href="{{ $val }}" title="{{ $key }}" target="_blank"><i class="ri-twitter-x-fill"></i></a>

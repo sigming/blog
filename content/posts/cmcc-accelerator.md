@@ -182,7 +182,7 @@ HMAC 计算方式：
 
 ## 配置信息获取
 接入点和认证信息可以通过其 Windows 客户端的日志文件查看，位置在 `[安装位置]\client\log\redirector.log`，示例如下：
-```
+```text
 Thu Jul 31 10:57:16 2025 | INFO | [SpeedupDriverApi.cpp:212] : Begin to install driver.
 Thu Jul 31 10:57:16 2025 | INFO | [SpeedupDriverApi.cpp:244] : Success to copy file to dest folder 
 Thu Jul 31 10:57:16 2025 | INFO | [SpeedupDriverApi.cpp:253] : Success to install driver.

@@ -1,22 +1,14 @@
 baseURL = "https://codming.com/"
-languageCode = "zh-CN"
+locale = "zh-CN"
 defaultContentLanguage = "en"
 title = "Codming"                        # site title                     # 网站标题
 theme = "zozo"
 hasCJKLanguage = true                  # has chinese/japanese/korean ?  # 自动检测是否包含 中文\日文\韩文
 summaryLength = 100
-paginate = 5                           # shows the number of articles   # 首页显示文章数量
 enableEmoji = true
 
-pygmentsUseClasses = true
-pygmentCodeFences = true
-pygmentscodefencesguesssyntax = true
-
-[author]                               # essential                      # 必需
-  name = "Ming"
-
-[blackfriday]
-  smartypants = false
+[pagination]
+  pagerSize = 5                        # shows the number of articles   # 首页显示文章数量
 
 [[menu.main]]                          # config your menu               # 配置菜单
   name = "Home"
@@ -48,7 +40,10 @@ pygmentscodefencesguesssyntax = true
   mainSections = ["posts","post"]
   customCSS = ["custom.css"]                          # 禁用页面切换动画效果的CSS
 
-[social]
+[params.author]                        # essential                      # 必需
+  name = "Ming"
+
+[params.social]
   github = "https://github.com/sigming"
   twitter = "https://x.com/codming"
   # facebook = " "
@@ -59,3 +54,6 @@ pygmentscodefencesguesssyntax = true
 [markup.goldmark]
 [markup.goldmark.renderer]
   unsafe = true
+[markup.highlight]
+  noClasses = false
+  guessSyntax = true

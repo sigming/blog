@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html {{ with .Site.LanguageCode }}lang="{{ . }}" {{ end }}>
+<html {{ with .Site.Language.Locale }}lang="{{ . }}" {{ end }}>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Author.name | safeHTML }}{{ end }}" />
+    <meta name="author" content="{{ if .Params.author }}{{ .Params.author | safeHTML }}{{ else }}{{ .Site.Params.author.name | safeHTML }}{{ end }}" />
     {{ $title := ( .Title ) }}
     {{ $siteTitle := ( .Site.Title ) }}
     {{ if .IsHome }}
@@ -16,7 +16,7 @@
     {{ if .Description }}
     <meta name="description" content="{{ .Description | safeHTML }}" />
     {{ else if .IsPage }}
-    <meta name="description" content="{{ .Summary | plainify }}" />
+    <meta name="description" content="{{ .Summary | plainify | strings.TrimSpace }}" />
     {{ else if .Site.Params.description }}
     <meta name="description" content="{{ .Site.Params.description | safeHTML }}" />
     {{ end }}
